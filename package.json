@@ -1,0 +1,64 @@
+{
+  "name": "learn-rollup",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/js/main.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c --watch",
+    "pro": "SET NODE_ENV=production",
+    "run": "npm run pro && npm run build",
+    "reload": "livereload 'build/'",
+    "watch": "npm-run-all --parallel reload dev",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Catherine.Yao",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/debug": "^0.0.30",
+    "@types/jest": "^23.3.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "cssnano": "^3.9.1",
+    "jest": "^23.5.0",
+    "livereload": "^0.6.0",
+    "node-sass": "^4.9.3",
+    "npm-run-all": "^3.1.2",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "regenerator-runtime": "^0.12.1",
+    "rollup": "^0.39.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-postcss": "^0.2.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-serve": "^0.4.2",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.0.0",
+    "ts-loader": "^4.5.0",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^7.1.0",
+    "tslint-loader": "^3.6.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.0",
+    "debug": "^2.6.0",
+    "source-map-loader": "^0.2.4"
+  }
+}
