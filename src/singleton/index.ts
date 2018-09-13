@@ -5,6 +5,11 @@ var getSingle = function(fn:Function) {
   }
 }
 
+var getName = function(name:String) {
+  console.log(this.name);
+}
+
 export {
-  getSingle
+  getSingle,
+  getName
 }

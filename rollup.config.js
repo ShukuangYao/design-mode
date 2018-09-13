@@ -11,7 +11,6 @@ import simplevars from 'postcss-simple-vars'
 import nested from 'postcss-nested'
 import cssnext from 'postcss-cssnext'
 import cssnano from 'cssnano'
-
 import rollupTypescript from 'rollup-plugin-typescript2'
 
 export default {
