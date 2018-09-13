@@ -1,7 +1,7 @@
 
 // 享元模式对象
 var Flyweight:any = function (internalState:any) {
-  if(internalState && internalState.length) {
+  if(internalState) {
     for(let i in internalState) {
       this[i] = internalState[i]
     }
@@ -14,7 +14,7 @@ var FlayweightFactory:any = (function () {
   return {
     create(internalState:any) {
       // 当有内部状态时，内部状态有多少，总共就有多少个对象
-      if(internalState && internalState.length) {
+      if(internalState) {
         let key:string = ''
         for(let i in internalState) {
           key += i
@@ -42,7 +42,7 @@ var FlyweightManager = (function () {
   return {
     add(id:number,internalState:any,externalState:any,func?:Function) {
       var flyweightObj = FlayweightFactory.create(internalState)
-      func && typeof func === 'function' && func(externalState)
+      func && func(externalState)
       flyweigthDatabase.id = externalState
       return flyweightObj
     },

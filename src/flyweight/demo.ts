@@ -18,7 +18,6 @@ var startUpload = function(files:Array<any>) {
       fileSize: file.fileSize
     }
     var uploadObj = FlyweightManager.add(++id,internalState,externalState,func)
-    console.log('uploadObj',uploadObj);
   }
 }
 

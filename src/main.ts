@@ -2,6 +2,7 @@ import {getSingle} from './singleton/index'
 import {createDiv} from './singleton/demo'
 import {caculateBonus} from './strategy/demo'
 import {startUpload} from './flyweight/demo'
+import {Composition, Single} from './composite/demo'
 
 var createSingleDiv = getSingle(createDiv)
 createSingleDiv()
@@ -29,6 +30,15 @@ startUpload(
     }
   ]
 )
+
+// 组合模式的例子
+var files = new Composition({fileName:'文件夹'})
+var file = new Single({fileName:'1.txt'})
+
+files.add(file)
+
+files.scan()
+
 // class Person {
 //   public name:String
 //   constructor(name:String) {
